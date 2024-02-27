@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:rpl2b_project/screen_page/page_registration.dart';
+import 'package:rpl2b_project/screen_page/search_listdata.dart';
 
 void main() {
   runApp(const MyApp());
@@ -67,7 +68,7 @@ class _PageHomeState extends State<PageHome>  with SingleTickerProviderStateMixi
     return Scaffold(
       body: TabBarView(
         controller: tabController,
-        children: const[ PageRegister(), PageTab2(), PageTabView()
+        children: const[ PageRegister(), PageTab2(), PageSearchData()
         ],
       ),
       bottomNavigationBar: BottomAppBar(
