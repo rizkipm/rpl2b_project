@@ -5,6 +5,7 @@ import 'package:rpl2b_project/screen_page/page_galerymovie.dart';
 import 'package:rpl2b_project/screen_page/page_list_berita.dart';
 import 'package:rpl2b_project/screen_page/page_list_user.dart';
 import 'package:rpl2b_project/screen_page/page_movie_gallery.dart';
+import 'package:rpl2b_project/screen_page/page_register.dart';
 import 'package:rpl2b_project/screen_page/page_registration.dart';
 import 'package:rpl2b_project/screen_page/search_listdata.dart';
 
@@ -39,7 +40,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const PageHome(),
+      // home: const PageHome(),
+      home: const PageRegisterNew(),
       debugShowCheckedModeBanner: false,
     );
   }

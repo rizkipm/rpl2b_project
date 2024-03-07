@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:rpl2b_project/model/model_berita.dart';
 import 'package:http/http.dart' as http;
 import 'package:rpl2b_project/screen_page/page_detail_berita.dart';
+import 'package:rpl2b_project/screen_page/page_login.dart';
+import 'package:rpl2b_project/utils/cek_session.dart';
 
 class PageListBerita extends StatefulWidget {
   const PageListBerita({super.key});
@@ -38,6 +40,18 @@ class _PageListBeritaState extends State<PageListBerita> {
       appBar: AppBar(
         title: Text('List Berita'),
         backgroundColor: Colors.orange,
+        actions: [
+          IconButton(onPressed: (){
+            //sesi logout
+            setState(() {
+              session.clearSession();
+              Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder:
+
+              (context)=> PageLogin()), (route) => false);
+            });
+          },
+              icon: Icon(Icons.exit_to_app))
+        ],
       ),
       body: FutureBuilder(
         future: getBerita(),
